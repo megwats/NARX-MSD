@@ -20,7 +20,7 @@ N = 10000
 time = dt*N
 t = np.arange(N) * dt
 forcetext = 'sin(2pi500t)'
-u =  np.sin(2*np.pi*500*t)
+u =  0.3*np.sin(2*np.pi*50*t)
 
 def generate(dt, N, u):
     x = np.zeros(N)
@@ -38,6 +38,8 @@ def generate(dt, N, u):
 print(f'generating data for {time} seconds, dt={dt}')
 
 data = generate(dt,N,u)
+plt.plot(u)
+plt.show()
 
 filename = f'N={N}-dt={dt}-force={forcetext}.txt'
 
